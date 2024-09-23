@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Patient Data</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    body {
+      background-color: #99c7f8; /* Light blue background */
+    }
+    .form-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffff; /* White background */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-container h1 {
+      color: #007bff; /* Blue heading */
+      text-align: center;
+    }
+    .form-control {
+      border-color: #007bff; /* Blue border for input fields */
+    }
+    .btn-primary {
+      background-color: #007bff; /* Blue submit button */
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1 class="mb-4">Enter Patient Data</h1>
+      <form method="POST" action="/predict">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="patient_id">Patient ID:</label>
+              <input type="text" class="form-control" id="patient_id" name="patient_id">
+            </div>
+            <div class="form-group">
+              <label for="patient_name">Patient Name:</label>
+              <input type="text" class="form-control" id="patient_name" name="patient_name">
+            </div>
+            <div class="form-group">
+              <label for="age">Age:</label>
+              <input type="text" class="form-control" id="age" name="age">
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender:</label>
+              <input type="text" class="form-control" id="gender" name="gender">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="tot_bilirubin">Total Bilirubin:</label>
+              <input type="text" class="form-control" id="tot_bilirubin" name="tot_bilirubin">
+            </div>
+            <div class="form-group">
+              <label for="direct_bilirubin">Direct Bilirubin:</label>
+              <input type="text" class="form-control" id="direct_bilirubin" name="direct_bilirubin">
+            </div>
+            <div class="form-group">
+              <label for="tot_proteins">Total Proteins:</label>
+              <input type="text" class="form-control" id="tot_proteins" name="tot_proteins">
+            </div>
+            <div class="form-group">
+              <label for="albumin">Albumin:</label>
+              <input type="text" class="form-control" id="albumin" name="albumin">
+            </div>
+            <div class="form-group">
+              <label for="ag_ratio">A/G Ratio:</label>
+              <input type="text" class="form-control" id="ag_ratio" name="ag_ratio">
+            </div>
+            <div class="form-group">
+              <label for="sgpt">SGPT:</label>
+              <input type="text" class="form-control" id="sgpt" name="sgpt">
+            </div>
+            <div class="form-group">
+              <label for="sgot">SGOT:</label>
+              <input type="text" class="form-control" id="sgot" name="sgot">
+            </div>
+            <div class="form-group">
+              <label for="alkphos">Alkaline Phosphatase:</label>
+              <input type="text" class="form-control" id="alkphos" name="alkphos">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
